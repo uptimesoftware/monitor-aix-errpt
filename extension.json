@@ -15,7 +15,7 @@
             "windows",
             "linux"
         ],
-        "grid_url_target": "https://github.com/uptimesoftware/monitor-aix-errp",
+        "grid_url_target": "https://github.com/uptimesoftware/monitor-aix-errpt",
         "type": "plugin",
         "description": "Check AIX errpt logs via an agent side script"
   }
