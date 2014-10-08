@@ -1,14 +1,14 @@
 AIX errpt Scanner
----------------
+=================
 
 DESCRIPTION
-===========
+-----------
 The AIX errpt Scanner monitor is designed to check the output of errpt on AIX agent 
 systems for specific error messages and return an alert if any instances matching
 the specified message are found. 
 
 FIELDS
-======
+------
 The AIX errpt Scanner monitor includes these monitor specific fields
 
 - Agent Port: This field must match the agent listening port (default 9998).
