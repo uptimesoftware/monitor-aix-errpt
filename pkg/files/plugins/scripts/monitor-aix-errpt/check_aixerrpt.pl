@@ -3,7 +3,7 @@
 # Check AIX Errpt Plug-in Monitor
 # -- monitoring station script
 # -- Desc: This script calls the errpt.sh script on your agent
-# --	system and parses the output for specific messages
+# --    system and parses the output for specific messages
 # Get input variables
 my $AGENT_HOSTNAME = $ENV{UPTIME_HOSTNAME};
 my $AGENT_PASS = $ENV{UPTIME_PASSWORD};
@@ -14,38 +14,37 @@ my $CHECK_CLASS = $ENV{UPTIME_CLASS};
 my $CHECK_TYPE = $ENV{UPTIME_TYPE};
 my $CHECK_IGNORE = $ENV{UPTIME_IGNORE};
 my $CHECK_TEXT = $ENV{UPTIME_TEXT};
+my $INST_DIR = $ENV{UPTIME_DIR};
+my $TMP_FILE = "check_aixerrpt.${AGENT_HOSTNAME}.$$";
 my $NETCAT;
-my $TMP_FILE;
 # Set some defaults, these will need to change depending on platform
 
 
 if (-e "/etc/hosts")
 {
-$NETCAT = "./agentcmd";
-$TMP_FILE = "../tmp/check_aixerrpt.${AGENT_HOSTNAME}.$$";
+$NETCAT = "$INST_DIR/scripts/agentcmd";
 }
-else 
+else
 {
-$NETCAT = "agentcmd";
-$TMP_FILE = "..\\tmp\\check_aixerrpt.${AGENT_HOSTNAME}.$$";
+$NETCAT = "$INST_DIR\\scripts\\agentcmd";
 }
 
 # Potential Logging Variables
 # Error classes
-#	H hardware
-#	S software
-#	O errlogger diagnostic messages
-#	U undetermined error 
+#       H hardware
+#       S software
+#       O errlogger diagnostic messages
+#       U undetermined error
 # Error types
-#	INFO informative (I)
-#	TEMP temporary (T)
-#	UNKN unknown (U)
-#	PERM permanent (P)
+#       INFO informative (I)
+#       TEMP temporary (T)
+#       UNKN unknown (U)
+#       PERM permanent (P)
 
 # Logic Breakdown
-	# The ignore patterns will be applied first.
-	# The error class + error type will be applied next.
-	# The ID / description regex match will be applied last
+        # The ignore patterns will be applied first.
+        # The error class + error type will be applied next.
+        # The ID / description regex match will be applied last
 
 # Processing begins
 
