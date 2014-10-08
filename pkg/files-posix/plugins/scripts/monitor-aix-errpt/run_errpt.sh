@@ -1,3 +1,3 @@
 #!/bin/sh
 
-perl ./check_aixerrpt.pl 
+perl ./check_aixerrpt.pl
