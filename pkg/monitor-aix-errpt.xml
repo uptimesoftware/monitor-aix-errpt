@@ -72,7 +72,7 @@
                 <decimal/>
             </gui_type>
         </element>
-        <element name="id" parameter_type="input" data_type="string" gui_basic="1" range_type="0">
+        <element name="errid" parameter_type="input" data_type="string" gui_basic="1" range_type="0">
             <control_options>size:12</control_options>
             <default_value/>
             <short_description>Error ID</short_description>
