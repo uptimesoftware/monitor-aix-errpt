@@ -2,7 +2,7 @@
   {
         "category": "Operating System Monitors",
         "supported_versions": [
-                "7.3"
+                "7.5"
         ],
         "name": "AIX errpt Scanner",
         "git_file_target": "https://github.com/uptimesoftware/monitor-aix-errpt/raw/master/dist/monitor-aix-errpt.zip",
